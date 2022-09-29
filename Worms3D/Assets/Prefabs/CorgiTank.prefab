@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2723239080864114614, guid: 3c8e950754a721a4085a5004f5d6e870, type: 3}
-  shootForce: 500
+  shootForce: 100
   upwardForce: 100
   timeBetweenShoting: 0
   spread: 1
@@ -272,6 +272,8 @@ MonoBehaviour:
   RotateSpeed: 5000
   cam: {fileID: 0}
   agent: {fileID: 0}
+  maxMoves: 0
+  movesUsed: 0
 --- !u!195 &7987167172118908299
 NavMeshAgent:
   m_ObjectHideFlags: 0

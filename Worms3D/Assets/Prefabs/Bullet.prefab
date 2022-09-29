@@ -129,5 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   lifeSpawn: 10
-  bulletSize: 1
+  bulletSize: 1.1
   areoOfEffect: 0

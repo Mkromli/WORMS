@@ -71,7 +71,7 @@ public class GunManager : MonoBehaviour
 
             //Spawns the bullet/projectile
             GameObject currentBullet = Instantiate(bullet, attackPoint.transform.position, attackPoint.transform.rotation);
-            
+
             //Adds forces to the bullet
             currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootForce);
             currentBullet.GetComponent<Rigidbody>().AddForce(transform.up * upwardForce);

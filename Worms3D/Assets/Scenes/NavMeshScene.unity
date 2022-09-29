@@ -443,11 +443,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7289534068792412987, guid: 6cd5aed6ab29cf549b461f066c1313ba, type: 3}
   m_PrefabInstance: {fileID: 436523590}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &644464870 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5853735892591050629, guid: 718e1d07054ae3f439efebc2b1c7bdb3, type: 3}
-  m_PrefabInstance: {fileID: 5853735893778008383}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &804650063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,88 +1048,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5853735892591050628, guid: 718e1d07054ae3f439efebc2b1c7bdb3, type: 3}
   m_PrefabInstance: {fileID: 5853735893778008383}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1262515900
+--- !u!114 &1262515901 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 345600875733395870, guid: 718e1d07054ae3f439efebc2b1c7bdb3, type: 3}
+  m_PrefabInstance: {fileID: 5853735893778008383}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644464870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a190f9cc9b33501439ae191735a9dc23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 2723239080864114614, guid: 3c8e950754a721a4085a5004f5d6e870, type: 3}
-  shootForce: 0
-  upwardForce: 0
-  timeBetweenShoting: 0
-  spread: 0
-  reloadTime: 0
-  timeBetweenShots: 0
-  maganizeSize: 0
-  bulletPerTap: 0
-  allowButtonHold: 0
-  attackPoint: {fileID: 0}
---- !u!114 &1262515901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644464870}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 247b833331ff7704ca9a7d13e150390d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1262515902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644464870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247b833331ff7704ca9a7d13e150390d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1262515903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644464870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f27990afbf0c348b997a947425475a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
---- !u!195 &1262515904
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644464870}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &1291687194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820114796}
   m_Layer: 0
-  m_Name: AimPoint
+  m_Name: PlayerOneAimPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1666,7 +1590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128158628}
   m_Layer: 0
-  m_Name: Aimpoint
+  m_Name: PlayerTwoAimpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1694,6 +1618,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1021410693}
     m_Modifications:
+    - target: {fileID: 2251716625587799972, guid: 718e1d07054ae3f439efebc2b1c7bdb3, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 2128158628}
     - target: {fileID: 5853735892365586197, guid: 718e1d07054ae3f439efebc2b1c7bdb3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1769,15 +1697,19 @@ PrefabInstance:
       objectReference: {fileID: 1820114796}
     - target: {fileID: 2380094718054779870, guid: d0fd832704421884cb3e04106e1acf4b, type: 3}
       propertyPath: bulletPerTap
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2380094718054779870, guid: d0fd832704421884cb3e04106e1acf4b, type: 3}
       propertyPath: maganizeSize
-      value: 1
+      value: 139
       objectReference: {fileID: 0}
     - target: {fileID: 2380094718054779870, guid: d0fd832704421884cb3e04106e1acf4b, type: 3}
       propertyPath: allowButtonHold
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380094718054779870, guid: d0fd832704421884cb3e04106e1acf4b, type: 3}
+      propertyPath: timeBetweenShoting
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2805659741894177487, guid: d0fd832704421884cb3e04106e1acf4b, type: 3}
       propertyPath: cam
