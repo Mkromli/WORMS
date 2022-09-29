@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0cf4599c1b466478e8213355564a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  lifeSpawn: 3
-  bulletSize: 1.05
+  damage: 0
+  lifeSpawn: 10
+  bulletSize: 1
   areoOfEffect: 0
