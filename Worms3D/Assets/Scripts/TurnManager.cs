@@ -14,6 +14,10 @@ public class TurnManager : MonoBehaviour
     private float turnDelay;
     private PlayerTurn currentPlayer;
 
+
+    public Camera Player1Cam;
+    public Camera Player2Cam;
+
     private void Awake()
     {
         if (instance == null)
@@ -38,6 +42,8 @@ public class TurnManager : MonoBehaviour
                 ChangeTurn();
             }
         }
+
+        ChangeCamera();
     }
 
     public bool IsItPlayerTurn(int index)
@@ -76,6 +82,23 @@ public class TurnManager : MonoBehaviour
     public PlayerTurn GetCurrentPlayer()
     {
         return currentPlayer;
+    }
+
+    public void ChangeCamera()
+    {
+        if (currentPlayerIndex == 1)
+        {
+            Player2Cam.gameObject.SetActive(false);
+            Player1Cam.gameObject.SetActive(true);
+            Debug.Log("camera 1");
+
+        }
+        else if (currentPlayerIndex == 2)
+        {
+            Player1Cam.gameObject.SetActive(false);
+            Player2Cam.gameObject.SetActive(true);
+            Debug.Log("camera 2");
+        }
     }
 
 }

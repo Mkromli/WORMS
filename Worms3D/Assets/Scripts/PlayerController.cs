@@ -7,11 +7,14 @@ public class PlayerController : MonoBehaviour
     public float RotateSpeed = 30f;
     
     public Camera cam;
+    public Camera cam2;
 
     public NavMeshAgent agent;
     
     public int maxMoves;
     public int movesUsed;
+
+    //OBS NEED TO MAKE SURE THE SWITCHING OF CAMERAS HAPPEN, CHANGE THE CAM VALUE TO WORK WITH CAM AND CAM 2. NEEDS REFERENCE FROM TURNMANAGER, "currentPlayerIndex"
 
     // Update is called once per frame
     void Update()
@@ -26,6 +29,8 @@ public class PlayerController : MonoBehaviour
         }
 
         
+
+
         
         if (Input.GetMouseButtonDown(0)) //Checks if the left mouse button is down
         {
