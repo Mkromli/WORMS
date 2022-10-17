@@ -29,7 +29,10 @@ public class GunManager : MonoBehaviour
     private bool readyToShoot;
     private bool reloading;
 
+    public int gunCurrentPlayer;
+
     public Transform attackPoint;
+    public Transform attackPoint2;
 
     private void Awake()
     {
@@ -64,8 +67,7 @@ public class GunManager : MonoBehaviour
     private void Shoot()
         {
             readyToShoot = false; //OBS THIS ONE MIGHT BE NEEDED!
-            Debug.Log("Shooting!");
-            
+
             //Creates some time between shots
             Invoke("ResetShot", timeBetweenShoting);
 
@@ -90,6 +92,11 @@ public class GunManager : MonoBehaviour
     {
         readyToShoot = true;
     }
-        
+
+
+    public void GunPlayerTurn()
+    {
+        GameObject.Find("TurnManager").GetComponent<TurnManager>().currentPlayerIndex = gunCurrentPlayer;
+    }
     
 }

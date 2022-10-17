@@ -12,7 +12,7 @@ public class TurnManager : MonoBehaviour
     public int currentPlayerIndex;
     private bool waitingForNextTurn;
     private float turnDelay;
-    private PlayerTurn currentPlayer;
+    public PlayerTurn currentPlayer;
 
 
     public Camera Player1Cam;
@@ -27,7 +27,6 @@ public class TurnManager : MonoBehaviour
             playerOne.SetPlayerTurn(1);
             playerTwo.SetPlayerTurn(2);
         }
-        Debug.Log(currentPlayerIndex +" is the current players turn");
     }
 
     private void Update()
@@ -76,7 +75,6 @@ public class TurnManager : MonoBehaviour
         {
             currentPlayerIndex = 1;
         }
-        Debug.Log(currentPlayerIndex + "extra"); 
     }
 
     public PlayerTurn GetCurrentPlayer()
@@ -90,14 +88,18 @@ public class TurnManager : MonoBehaviour
         {
             Player2Cam.gameObject.SetActive(false);
             Player1Cam.gameObject.SetActive(true);
-            Debug.Log("camera 1");
+            GameObject.Find("PlayerController").GetComponent<PlayerController>().cam = Player1Cam;
+            GameObject.Find("CorgiTank").GetComponent<GunManager>().enabled = true;
+            GameObject.Find("CorgiTank 2").GetComponent<GunManager>().enabled = false;
 
         }
         else if (currentPlayerIndex == 2)
         {
             Player1Cam.gameObject.SetActive(false);
             Player2Cam.gameObject.SetActive(true);
-            Debug.Log("camera 2");
+            GameObject.Find("PlayerController").GetComponent<PlayerController>().cam = Player2Cam;
+            GameObject.Find("CorgiTank").GetComponent<GunManager>().enabled = false;
+            GameObject.Find("CorgiTank 2").GetComponent<GunManager>().enabled = true;
         }
     }
 

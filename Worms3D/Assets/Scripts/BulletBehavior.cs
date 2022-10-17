@@ -42,7 +42,7 @@ public class BulletBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealth>().health -= damage;
-            Debug.Log("CORGI DYING");
+            Debug.Log("CORGI HURT");
             Destroy(gameObject);
         }
         SizeOfTheBullet();

@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public float RotateSpeed = 30f;
     
     public Camera cam;
-    public Camera cam2;
 
     public NavMeshAgent agent;
     
@@ -32,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
 
         
-        if (Input.GetMouseButtonDown(0)) //Checks if the left mouse button is down
+        if (Input.GetMouseButtonDown(0)) //Checks if the left mouse button is down, script bellow is for movement
         {
             
             agent.enabled = true;
@@ -44,9 +43,9 @@ public class PlayerController : MonoBehaviour
                 agent.SetDestination(hit.point);
             }
 
-            movesUsed++;
+            movesUsed++; //Adds to the moveUsed, this limits the amounts of actions per turn
 
-           if (movesUsed == maxMoves) //Changes turn ones all moves are done
+           if (movesUsed >= maxMoves) //Changes turn ones all moves are done
            {
                TurnManager.GetInstance().ChangeTurn();
                //agent.ResetPath();
@@ -56,17 +55,21 @@ public class PlayerController : MonoBehaviour
             
             
             
-            
+        }
+
+        if (Input.GetMouseButtonDown(1)) // Checks if the right mouse button is down, script bellow is for shooting
+        {
+            movesUsed++;
+            if (movesUsed >= maxMoves) //Changes turn ones all moves are done
+            {
+                TurnManager.GetInstance().ChangeTurn();
+                //agent.ResetPath();
+                movesUsed = 0;
+            }
+            print(movesUsed);
         }
         
-
-
-       /* if (Input.GetMouseButtonDown(0))
-        {
-            gameObject.GetComponent<NavMeshAgent>().enabled = true;
-        }*/
-        
-        // THS SHIT DOES NOT WORK ANYMORE, NEEEDS A REFERENCE TO THE CURRENT PLAYER NAV MESH AGENT
+        // THS DOES NOT WORK ANYMORE, NEEEDS A REFERENCE TO THE CURRENT PLAYER NAV MESH AGENT
         if (Input.GetKeyDown(KeyCode.Q))
         {
             print("Q was pressed");
